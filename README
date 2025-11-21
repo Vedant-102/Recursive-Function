@@ -1,0 +1,23 @@
+In C programming, a recursive function is a function that calls itself, either directly or indirectly, to solve a problem. This technique is often used to break down complex problems into smaller, more manageable subproblems that are identical in nature to the original problem.
+	
+Key Components of a Recursive Function:
+Base Case: This is a condition that defines when the recursion should stop. Without a base case, a recursive function would call itself indefinitely, leading to a stack overflow error. The base case provides a direct solution for the simplest instance of the problem.
+Recursive Case: This is the part of the function where it calls itself with a modified or smaller version of the input, moving closer to the base case.
+
+How Recursion Works:
+When a recursive function is called, an activation record (also known as a stack frame) is created on the call stack. This record stores local variables, parameters, and the return address for that particular function call. When the function calls itself, a new activation record is pushed onto the stack. This process continues until the base case is reached. Once the base case returns a value, the activation records are popped from the stack in reverse order, and the returned values are used to compute the final result.
+	
+	Advantages of Recursion:
+Provides elegant and concise solutions for problems that can be naturally defined in terms of smaller, similar subproblems (e.g., tree traversals, quicksort).
+Can make code more readable and easier to understand for certain types of problems.
+
+
+	Disadvantages of Recursion:
+Can be less efficient than iterative solutions due to the overhead of function calls and stack management.
+Can lead to stack overflow errors if the recursion depth is too large and exceeds the available stack space.
+Debugging recursive functions can sometimes be more challenging.
+
+In this program, we print a numeric pattern & the number of rows will be taken as the user input. We will use 2 recursive functions, printRow() & printPattern().
+printRow(): It prints numbers starting from 1 upto the current row number. It calls itself, increasing the number until it reaches the limit
+printPattern(): It calls printRow() to print the current line, prints a newline character & then recursively calls itself for the next row until it reaches the user’s desired number of rows.
+
